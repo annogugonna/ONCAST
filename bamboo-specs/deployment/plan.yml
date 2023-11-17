@@ -13,8 +13,9 @@ variables:
   - foo: bar
 
 stages:
-  - BUILD_ROCKET:
-    - Build
+  - name: BUILD_ROCKET
+    jobs:
+      - Build
 
 #Job definition
 Build:
