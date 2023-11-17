@@ -13,10 +13,10 @@ variables:
   - foo: bar
 
 stages:
-  - name: PRE-BUILD
-    jobs:
-      - PRE-BUILD-JOB:
-          key: JOB
-          name: JUST ECHOING
-          script:
-            - echo "PRE-BUILD -- PRE-BUILD!!!!"
+  - PRE-BUILD:
+      jobs:
+        - PRE-BUILD-JOB:
+            key: JOB1
+            name: JUST ECHOING
+            script:
+              - echo "PRE-BUILD -- PRE-BUILD!!!!"
