@@ -8,7 +8,7 @@ plan:
     - default:
         jobs:
           - job:
-              key: JOB2
+              key: JOB1
               name: Echo Message
               script:
                 - echo "Hello, this is an echo message."
