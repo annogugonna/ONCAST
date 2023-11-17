@@ -14,9 +14,9 @@ variables:
 
 stages:
   - name: PRE-BUILD
-      jobs:
-        - job:
-            key: JOB
-            name: JUST ECHOING
-            script:
-              - echo "PRE-BUILD -- PRE-BUILD!!!!"
+    jobs:
+      - job:
+          key: JOB
+          name: JUST ECHOING
+          script:
+            - echo "PRE-BUILD -- PRE-BUILD!!!!"

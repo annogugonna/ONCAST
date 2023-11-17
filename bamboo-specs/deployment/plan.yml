@@ -14,16 +14,16 @@ variables:
 
 stages:
   - name: PRE-BUILD
-      jobs:
-        - job:
-            key: JOB2
-            name: First Echo Message
-            script:
-              - echo "THIS IS THE FIRST MESSAGE!!!!!!."
+    jobs:
+      - job:
+          key: JOB2
+          name: First Echo Message
+          script:
+            - echo "THIS IS THE FIRST MESSAGE!!!!!!."
   - name: BUILD
-      jobs:
-        - job:
-            key: JOB1
-            name: Echo Message
-            script:
-              - echo "Hello DEPLOYMENT, HELLO, DEPLOYMENT"
+    jobs:
+      - job:
+          key: JOB1
+          name: Echo Message
+          script:
+            - echo "Hello DEPLOYMENT, HELLO, DEPLOYMENT"
