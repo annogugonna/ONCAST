@@ -13,8 +13,7 @@ variables:
   - foo: bar
 
 stages:
-  - pre-build:
-      manual: false
+  - PRE-BUILD:
       jobs:
         - job:
             key: JOB

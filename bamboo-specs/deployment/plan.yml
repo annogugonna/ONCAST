@@ -13,16 +13,14 @@ variables:
   - foo: bar
 
 stages:
-  - pre-build:
-      manual: false
+  - PRE-BUILD:
       jobs:
         - job:
             key: JOB2
             name: First Echo Message
             script:
               - echo "THIS IS THE FIRST MESSAGE!!!!!!."
-  - Build:
-      manual: false
+  - BUILD:
       jobs:
         - job:
             key: JOB1
