@@ -3,7 +3,7 @@ version: 2
 
 plan:
   key: OPS
-  name: Your Plan Name
+  name: DEPLOYMENT
   project-key: ON
 triggers:
   - polling:
@@ -15,15 +15,8 @@ variables:
 stages:
   - name: PRE-BUILD
     jobs:
-      - job:
-          key: JOB2
-          name: First Echo Message
+      - PRE-BUILD-JOB:
+          key: JOB
+          name: JUST ECHOING
           script:
-            - echo "THIS IS THE FIRST MESSAGE!!!!!!."
-  - name: BUILD
-    jobs:
-      - job:
-          key: JOB1
-          name: Echo Message
-          script:
-            - echo "Hello DEPLOYMENT, HELLO, DEPLOYMENT"
+            - echo "DEPLOYMENT!!! DEPLOYMENT!!!!"
