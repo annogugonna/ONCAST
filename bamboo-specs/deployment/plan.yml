@@ -1,15 +1,27 @@
 ---
 version: 2
+
 plan:
   key: OPS
   name: Your Plan Name
   project-key: ON
-  stage:
-    - default:
-        jobs:
-          - job:
-              key: JOB1
-              name: Echo Message
-              script:
-                - echo "Hello, this is an echo message."
+triggers:
+  - polling:
+      period: 180
 
+variables:
+  - foo: bar
+
+stages:
+  - pre-build:
+      manual: false
+      jobs:
+        - Build Artifacts
+  - Build:
+      manual: false
+      jobs:
+        - job:
+            key: JOB1
+            name: Echo Message
+            script:
+              - echo "Hello DEPLOYMENT, HELLO, DEPLOYMENT"
