@@ -16,8 +16,8 @@ stages:
   - pre-build:
       manual: false
       jobs:
-        - Build Artifacts
-  - Build:
-      manual: false
-      jobs:
-        - Build Service
+        - job:
+            key: JOB
+            name: JUST ECHOING
+            script:
+              - echo "PRE-BUILD -- PRE-BUILD!!!!"

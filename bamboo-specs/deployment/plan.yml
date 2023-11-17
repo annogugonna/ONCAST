@@ -16,7 +16,11 @@ stages:
   - pre-build:
       manual: false
       jobs:
-        - Build Artifacts
+        - job:
+            key: JOB2
+            name: First Echo Message
+            script:
+              - echo "THIS IS THE FIRST MESSAGE!!!!!!."
   - Build:
       manual: false
       jobs:
